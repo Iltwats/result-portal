@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Pass Fail Detector</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <script type="text/javascript" src="./assets/js/calculation.js"></script>
+
+</head>
+
+<body class="is-preload" onload="cheche()">
+  <div id="wrapper">
+    <section class="intro">
+      <header>
+        <h1>Pass Fail Detector</h1>
+        <h2>By <a href="http://jueezy.rocks">JU-Eezy</a></h2>
+        <h3>We get your result before you get!!😉</h3>
+      </header></br>
+      <div style="text-align: center;" class="content">
+        <br /><br />
+        <p><br>
+          <i>A Detector to know how much risk you are taking ;-)</i>
+        </p><br><br><br>
+         <h2>Know how much to score in end sems or if you have already given your exams, find out if you are safe.</h2>
+      </div>
+    </section>
+    <section>
+      <header>
+        <h2>Know how much to score</h2>
+        <h3>Enter marks scored in In-sem,End-Sem,Assignment and attendance!!</h3>
+      </header>
+      <div class="content">
+        <form method="post" action="#">
+          <div class="fields">
+            <div class="field">
+              <label for="Inse1">Marks scored In In-Sem 1 (50):</label>
+              <input type="number" name="Inse1" id="Inse1" min="0" max="50" value="0" placeholder="Don't Leave Empty" />
+            </div>
+            <div class="field">
+              <label for="Inse2">Marks scored in In-Sem 2 (50):</label>
+              <input type="number" name="Inse2" id="Inse2" min="0" max="50" value="0" placeholder="Don't Leave Empty" />
+                          </div>
+            <div class="field">
+              <label for="Endse">Marks scored in End-Sem (100):</label>
+              <input type="number" name="Endse" id="Endse" min="0" max="100" value="0" placeholder="Don't Leave Empty" />
+            </div>
+            <div class="field">
+              <label for="Assig">Marks given in Assignment (15)</label>
+              <input type="number" name="Assig" id="Assig" min="0" max="15" value="0" placeholder="Don't Leave Empty" />
+            </div>
+            <div class="field">
+              <label for="Atten">Marks crdited for Attendance (5)</label>
+              <input type="number" name="Atten" id="Atten" min="0" max="5" value="0" placeholder="Don't Leave Empty" />
+            </div>
+            
+          </div>
+          <ul class="actions">
+            <li>
+              <a onclick="SetValues()" class="button primary icon solid fa-calculator">Calculate</a>
+            </li>
+            <li><input type="reset" value="Reset" /></li>
+          </ul>
+        </form>
+        <br />
+      </div>
+    </section>
+    <section >
+      <header>
+        <h2>Result</h2>
+      </header>
+      <div class="content">
+        <h2 style="text-align: center;">
+          Your Total Marks in the subject is:
+          <strong id="gradeObject" style="color: #550F7E;">NA</strong>
+           <h2 style="text-align: center;"><p id="p2"></p></h2>
+        </h2>
+      </div>
+      
+    </section>
+    <section>
+      <header>
+        <h2>Know Your GPA</h2>
+        <h3>Get your GPA even if you have backlog!!<br>Enter Grades secured in all subjects!</h3>
+      
+      </header>
+      <div class="content">
+        <form method="post" action="#">
+          <div class="fields">
+            <div class="field half">
+              <label for="aplus">A+</label>
+              <input type="number" name="aplus" id="aplus" value="0" placeholder="Don't Leave Empty" />
+            </div>
+            <div class="field half">
+              <label for="aonly">A</label>
+              <input type="number" name="aonly" id="aonly" value="0" placeholder="Don't Leave Empty" />
+            </div>
+            <div class="field half">
+              <label for="bee">B</label>
+              <input type="number" name="bee" id="bee" value="0" placeholder="Don't Leave Empty" />
+            </div>
+            <div class="field half">
+              <label for="cee">C</label>
+              <input type="number" name="cee" id="cee" value="0" placeholder="Don't Leave Empty" />
+            </div>
+            <div class="field half">
+              <label for="dee">D</label>
+              <input type="number" name="dee" id="dee" value="0" placeholder="Don't Leave Empty" />
+            </div>
+            <div class="field half">
+              <label for="eee">E</label>
+              <input type="number" name="eee" id="eee" value="0" placeholder="Don't Leave Empty" />
+            </div>
+            </div>
+          <ul class="actions">
+            <li>
+              <a onclick="getgrade()" class="button primary icon solid fa-calculator">Calculate</a>
+            </li>
+            <li><input type="reset" value="Reset" /></li>
+          </ul>
+        </form>
+        <br />
+      </div>
+    </section>
+    <section>
+      <header>
+        <h2>Result</h2>
+      </header>
+      <div class="content">
+        <h1 style="text-align: center;">
+          Your GPA is:
+          <strong id="resultObject" style="color: #550F7E;">NA</strong>
+        </h1>
+        <br><h5>  Disclaimer: Your calculated GPA here may have an error of +/-0.3.          
+        </h5>
+      </div>
+    </section>
+    <!-- Section -->
+    <section>
+      <header>
+        <h2>Hey There..</h2>
+      </header>
+      
+      <footer>
+        <ul class="items">
+          <li>
+            <h3>Email</h3>
+            <a href="mailto:atulsharma_2012@outlook.com">atulsharma_2012@outlook.com</a>
+          </li>
+          <li>
+            <h3>Phone</h3>
+            <a href="tel:7010437483">(+91) 7010437483</a>
+          </li>
+          <li>
+            <h3>Address</h3>
+            <span>JECRC University, Vidhani, Sitapura, Jaipur</span>
+          </li>
+          <li>
+            <h3>Elsewhere</h3>
+            <ul class="icons">
+              <li>
+                <a href="https://twitter.com/Iltwats_Atul" class="icon brands fa-twitter"><span class="label">Twitter</span></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/1220atul" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/atulsharma_01/" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/1220atul/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a>
+              </li>
+              <li>
+                <a href="https://github.com/Iltwats" class="icon brands fa-github"><span class="label">GitHub</span></a>
+              </li>
+              <li>
+                <a href="https://codepen.io/Special_octo20" class="icon brands fa-codepen"><span class="label">Codepen</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </footer><br>
+      <div style="text-align: center;" class="disclaimer">
+      <a href="https://github.com/Iltwats/Pass-Fail-Detector" class="button primary">
+          Contribute</a><br /><br />
+        <h2>Contributers:</h2>
+        <h2 class="txt-rotate"></h2>
+        
+      </div>
+    </section>
+       
+
+    <!-- Copyright -->
+    <div style="text-align: center;" class="copyright">
+      &copy; JU-Eezy. All rights reserved. Design:
+      <a href="#">Atul Sharma</a>.
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="./assets/js/jquery.scrolly.min.js"></script>
+  <script type="text/javascript" src="./assets/js/browser.min.js"></script>
+  <script type="text/javascript" src="./assets/js/breakpoints.min.js"></script>
+  <script type="text/javascript" src="./assets/js/util.js"></script>
+  <script type="text/javascript" src="./assets/js/main.js"></script>
+  <script type="text/javascript" src="./assets/js/contributerList.js"></script>
+  <script type="text/javascript" src="./assets/contributer.json"></script>
+</body>
+
+</html>
